@@ -874,134 +874,100 @@ summary.prompt-summary:hover {
 }
 
 
-/* --- Interactive Section Grid --- */
-  /* --- 布局样式 --- */
-.four-item-grid {
-  display: grid;
-  /* 核心：强制分为4列，每列等宽 */
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 1rem; /* 视频之间的间距 */
-  width: 100%;
-  align-items: start; /* 顶部对齐 */
+/* ==================== 新增 Interactive Section 样式 ==================== */
+.interactive-section {
+  border-top: 1px solid #e1e1e1;
+  padding-top: 3rem;
 }
 
-.grid-item {
+/* 4列网格布局 */
+.interactive-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 2rem;
+}
+
+/* 单个卡片容器 */
+.interactive-card {
   background: #fff;
   border-radius: 8px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
 }
 
-.video-container {
+.interactive-card video {
   width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 6px;
   margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.video-container video {
-  width: 100%;
-  height: auto;
-  display: block;
+/* 美化的按钮样式 (Summary) */
+details.interactive-details > summary {
+  list-style: none; /* 隐藏默认箭头 */
+  outline: none;
 }
-
-/* --- 按钮区域样式 --- */
-.prompt-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 8px; /* A和B之间的间距 */
-}
-
-/* Details 基础样式 */
-details.custom-details {
-  width: 100%;
-  position: relative;
-}
-
-/* Summary (按钮本体) 样式 */
-details.custom-details summary {
-  list-style: none;
-  padding: 6px 12px;
-  border-radius: 50px; /* 胶囊形状 */
-  color: white;
-  font-weight: 600;
-  font-size: 0.8rem;
-  cursor: pointer;
-  text-align: center;
-  transition: transform 0.1s ease, box-shadow 0.2s ease;
-  white-space: nowrap; /* 防止按钮文字换行 */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  position: relative;
-  user-select: none;
-}
-
-/* 移除默认的小三角 */
-details.custom-details summary::-webkit-details-marker {
+details.interactive-details > summary::-webkit-details-marker {
   display: none;
 }
 
-/* 鼠标悬停效果 */
-details.custom-details summary:hover {
-  transform: scale(1.02);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-}
-
-/* 点击时的按压效果 */
-details.custom-details summary:active {
-  transform: scale(0.98);
-}
-
-/* --- 颜色区分 --- */
-
-/* Prompt A: 科技蓝渐变 */
-details.prompt-a summary {
-  background: linear-gradient(90deg, #3a7bd5 0%, #3a6073 100%);
-}
-
-/* Prompt B: 活力橙/红渐变 */
-details.prompt-b summary {
-  background: linear-gradient(90deg, #e65c00 0%, #F9D423 100%);
-  color: #fff;
-  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
-}
-
-/* 展开后的文字内容 */
-.prompt-text {
+.interactive-btn {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
   margin-top: 5px;
-  padding: 8px;
-  background-color: #f8f9fa;
-  border: 1px solid #e9ecef;
-  border-radius: 6px;
-  font-size: 0.75rem;
-  line-height: 1.3;
+  background-color: #f0f2f5;
   color: #4a4a4a;
-  text-align: left;
-  animation: slideDown 0.2s ease-out;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  border-radius: 20px; /* 胶囊形状 */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
 }
 
-/* 展开动画 */
-@keyframes slideDown {
+.interactive-btn:hover {
+  background-color: #eef3fc;
+  color: #3273dc;
+  border-color: #3273dc;
+  box-shadow: 0 2px 8px rgba(50, 115, 220, 0.15);
+}
+
+/* 展开后的内容区域 */
+.interactive-content {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  text-align: left;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.prompt-block {
+  margin-bottom: 8px;
+}
+.prompt-block:last-child {
+  margin-bottom: 0;
+}
+.prompt-label {
+  display: block;
+  font-weight: 700;
+  color: #363636;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+.prompt-label.label-a { color: #3273dc; } /* 蓝色标签 */
+.prompt-label.label-b { color: #00d1b2; } /* 绿色标签 */
+
+@keyframes fadeIn {
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* 展开状态下，按钮右侧添加一个小图标指示 */
-details.custom-details summary::after {
-  content: ' +';
-  font-size: 0.8em;
-  opacity: 0.8;
-}
-details[open] summary::after {
-  content: ' -';
-}
-
-/* --- 响应式处理 --- */
-/* 只有在屏幕极小（手机竖屏）时才允许换行，保证可读性 */
-@media screen and (max-width: 768px) {
-  .four-item-grid {
-    grid-template-columns: repeat(2, 1fr); /* 手机端改为2列，防止太挤 */
-  }
-}
