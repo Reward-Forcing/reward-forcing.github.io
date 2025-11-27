@@ -374,142 +374,159 @@
 
 
 <section class="hero is-light is-small comparison-section">
-  <div class="hero-body" style="padding: 0;">
+  <div class="hero-body" style="padding: 0;"> <!-- 去掉 hero-body 默认的 padding -->
     
+    <!-- 使用自定义的 full-width-container -->
     <div class="container full-width-container">
       
-      <h2 class="title is-3 has-text-centered" style="margin-top: 2rem;">Method Comparison</h2>
+      <h2 class="title is-3 has-text-centered" style="margin-top: 2rem;">Scene Navigation Comparison</h2>
       <p class="subtitle is-5 has-text-centered">
-        Comparison across 5 methods (Full Width)
+        Full-width comparison across 5 different methods.
       </p>
       <br>
 
-      <!-- 表头：恢复为5个 -->
+      <!-- 表头 -->
       <div class="comparison-grid header-row">
-        <div class="comparison-column method-name">Method A</div>
-        <div class="comparison-column method-name">Method B</div>
-        <div class="comparison-column method-name">Method C</div>
-        <div class="comparison-column method-name">Method D</div>
-        <div class="comparison-column method-name is-ours">Ours</div>
+        <div class="comparison-column method-name">SkyReels V2</div>
+        <div class="comparison-column method-name">CausVid</div>
+        <div class="comparison-column method-name">Self Forcing</div>
+        <div class="comparison-column method-name">LongLive</div>
+        <div class="comparison-column method-name is-ours">Reward Forcing</div>
       </div>
 
-      <!-- ==================== Group 1 ==================== -->
+      <!-- ==================== Prompt 1 ==================== -->
       <div>
-        <!-- 视频网格 -->
+        <div class="prompt-label">
+          "A cinematic drone shot of a futuristic city at sunset"
+        </div>
+
         <div class="comparison-grid">
-          <!-- Method A -->
+          <!-- Method 1 -->
           <div class="comparison-column video-wrapper">
             <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/carousel1.mp4" type="video/mp4">
+              <source src="static/videos/reward_forcing/video1/causvid.mp4" type="video/mp4">
             </video>
           </div>
-          <!-- Method B -->
+          <!-- Method 2 -->
           <div class="comparison-column video-wrapper">
             <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/carousel2.mp4" type="video/mp4">
+              <source src="static/videos/reward_forcing/video1/causvid.mp4" type="video/mp4">
             </video>
           </div>
-          <!-- Method C -->
+          <!-- Method 3 -->
           <div class="comparison-column video-wrapper">
             <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/carousel3.mp4" type="video/mp4">
+              <source src="static/videos/reward_forcing/video1/self_forcing.mp4" type="video/mp4">
             </video>
           </div>
-          <!-- Method D (恢复) -->
+          <!-- Method 4 -->
           <div class="comparison-column video-wrapper">
             <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/carousel2.mp4" type="video/mp4">
+              <source src="static/videos/reward_forcing/video1/longlive.mp4" type="video/mp4">
             </video>
           </div>
-          <!-- Ours -->
+          <!-- Method 5 (Ours) -->
           <div class="comparison-column video-wrapper">
             <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/carousel1.mp4" type="video/mp4">
+              <source src="static/videos/reward_forcing/video1/reward_forcing.mp4" type="video/mp4">
             </video>
           </div>
         </div>
-
-        <!-- Prompt (放在下方，点击展开) -->
-        <details class="prompt-toggle">
-          <summary class="prompt-summary">Click to view Prompt 1</summary>
-          <div class="prompt-full-text">
-A highly detailed, cinematic drone shot of a futuristic city at sunset, featuring flying cars, neon lights reflecting off glass skyscrapers, and a dense atmosphere. The lighting is dramatic with orange and teal contrast. 8k resolution, unreal engine 5 render style.
-          </div>
-        </details>
       </div>
 
-      <!-- ==================== Group 2 ==================== -->
+      <!-- ==================== Prompt 2 ==================== -->
       <div>
-        <!-- 视频网格 -->
+        <div class="prompt-label">
+          "A cinematic drone shot of a futuristic city at sunset"
+        </div>
+
         <div class="comparison-grid">
-          <!-- Method A -->
+          <!-- Method 1 -->
           <div class="comparison-column video-wrapper">
             <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/carousel3.mp4" type="video/mp4">
+              <source src="static/videos/reward_forcing/video1/causvid.mp4" type="video/mp4">
             </video>
           </div>
-          <!-- Method B -->
+          <!-- Method 2 -->
           <div class="comparison-column video-wrapper">
             <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/carousel1.mp4" type="video/mp4">
+              <source src="static/videos/reward_forcing/video1/causvid.mp4" type="video/mp4">
             </video>
           </div>
-          <!-- Method C -->
+          <!-- Method 3 -->
           <div class="comparison-column video-wrapper">
             <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/carousel2.mp4" type="video/mp4">
+              <source src="static/videos/reward_forcing/video1/self_forcing.mp4" type="video/mp4">
             </video>
           </div>
-          <!-- Method D (恢复) -->
+          <!-- Method 4 -->
           <div class="comparison-column video-wrapper">
             <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/carousel3.mp4" type="video/mp4">
+              <source src="static/videos/reward_forcing/video1/longlive.mp4" type="video/mp4">
             </video>
           </div>
-          <!-- Ours -->
+          <!-- Method 5 (Ours) -->
           <div class="comparison-column video-wrapper">
             <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/carousel1.mp4" type="video/mp4">
+              <source src="static/videos/reward_forcing/video1/reward_forcing.mp4" type="video/mp4">
             </video>
           </div>
         </div>
+      </div>
 
-        <!-- Prompt (放在下方，点击展开) -->
-        <details class="prompt-toggle">
-          <summary class="prompt-summary">Click to view Prompt 2</summary>
-          <div class="prompt-full-text">
-A cute corgi astronaut floating in zero gravity inside a spaceship, looking out the window at a swirling purple nebula. The corgi is wearing a detailed white space suit with a small flag patch. Soft interior lighting, high detail fur texture.
+      <div>
+        <div class="prompt-label">
+          "A cinematic drone shot of a futuristic city at sunset"
+        </div>
+
+        <div class="comparison-grid">
+          <!-- Method 1 -->
+          <div class="comparison-column video-wrapper">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/reward_forcing/video1/causvid.mp4" type="video/mp4">
+            </video>
           </div>
-        </details>
+          <!-- Method 2 -->
+          <div class="comparison-column video-wrapper">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/reward_forcing/video1/causvid.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!-- Method 3 -->
+          <div class="comparison-column video-wrapper">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/reward_forcing/video1/self_forcing.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!-- Method 4 -->
+          <div class="comparison-column video-wrapper">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/reward_forcing/video1/longlive.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!-- Method 5 (Ours) -->
+          <div class="comparison-column video-wrapper">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/reward_forcing/video1/reward_forcing.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- 视频同步脚本 -->
+<!-- 视频同步脚本 (保持不变，这对于对比很重要) -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const rows = document.querySelectorAll('.comparison-grid:not(.header-row)');
     rows.forEach(row => {
       const videos = row.querySelectorAll('video');
       videos.forEach(video => {
-        // 播放同步
-        video.addEventListener('play', () => { 
-            videos.forEach(v => { if (v !== video && v.paused) v.play(); }); 
-        });
-        // 暂停同步
-        video.addEventListener('pause', () => { 
-            videos.forEach(v => { if (v !== video && !v.paused) v.pause(); }); 
-        });
-        // 进度条拖拽同步
-        video.addEventListener('seeking', () => { 
-            videos.forEach(v => { 
-                if (v !== video && Math.abs(v.currentTime - video.currentTime) > 0.1) { 
-                    v.currentTime = video.currentTime; 
-                } 
-            }); 
-        });
+        video.addEventListener('play', () => { videos.forEach(v => { if (v !== video && v.paused) v.play(); }); });
+        video.addEventListener('pause', () => { videos.forEach(v => { if (v !== video && !v.paused) v.pause(); }); });
+        video.addEventListener('seeking', () => { videos.forEach(v => { if (v !== video && Math.abs(v.currentTime - video.currentTime) > 0.1) { v.currentTime = video.currentTime; } }); });
       });
     });
   });

@@ -751,25 +751,37 @@ a:focus {
 
 /* --- 核心布局调整 --- */
 .comparison-section {
-  padding: 2rem 0;
+  padding: 2rem 0; /* 上下留白，左右不留白(由内部容器控制) */
 }
 
+/* 强制容器占满宽度 */
 .full-width-container {
-  width: 98%; /* 占据页面绝大部分宽度 */
-  max-width: none !important;
-  margin: 0 auto;
+  width: 98%; /* 占据页面98%的宽度 */
+  max-width: none !important; /* 覆盖 Bulma 的最大宽度限制 */
+  margin: 0 auto; /* 居中 */
 }
 
 /* --- 网格系统 --- */
 .comparison-grid {
   display: grid;
-  /* 修改：恢复为5列 */
+  /* 5列等分 */
   grid-template-columns: repeat(5, 1fr); 
-  gap: 0.5%; /* 5列比较挤，间隙设小一点 */
-  margin-bottom: 10px; /* 视频和下方Prompt之间的距离 */
+  gap: 0.5%; /* 视频之间的间隙，使用百分比适应屏幕 */
+  margin-bottom: 2rem;
 }
 
 /* --- 样式美化 --- */
+.prompt-label {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #4a4a4a;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 1.1rem; /* 字体稍微调大一点 */
+}
+
 .header-row {
   margin-bottom: 10px;
 }
@@ -777,93 +789,49 @@ a:focus {
 .method-name {
   text-align: center;
   font-weight: bold;
-  font-size: 1.1rem; /* 字体稍微调小以适应5列 */
+  font-size: 1.2rem; /* 标题字体调大 */
   color: #363636;
-  white-space: nowrap; /* 防止标题换行 */
 }
 
 .method-name.is-ours {
   color: #d93025;
   font-weight: 800;
-  text-decoration: underline;
+  text-decoration: underline; /* 加下划线强调 */
 }
 
 /* --- 视频容器 --- */
 .video-wrapper {
   position: relative;
   width: 100%;
+  /* 关键：设置纵横比，确保视频放大后高度自动跟随 */
+  /* 如果你的视频是正方形，改成 1/1。如果是 4:3，改成 4/3 */
   aspect-ratio: 16/9; 
   background: #000;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 加一点阴影增加立体感 */
 }
 
 .video-wrapper video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* 确保填满容器 */
   display: block;
 }
 
-/* --- Prompt 折叠样式 (关键修改) --- */
-details.prompt-toggle {
-  margin-bottom: 3rem; /* 每个大组之间的间距 */
-  background-color: #fff;
-  border-radius: 6px;
-  text-align: center;
-}
-
-summary.prompt-summary {
-  cursor: pointer;
-  font-weight: 600;
-  color: #3273dc;
-  padding: 8px;
-  user-select: none;
-  list-style: none; /* 隐藏默认的小三角 */
-  transition: color 0.2s;
-}
-
-/* 自定义展开图标（可选） */
-summary.prompt-summary::after {
-  content: " ▼";
-  font-size: 0.8em;
-}
-details[open] summary.prompt-summary::after {
-  content: " ▲";
-}
-
-summary.prompt-summary:hover {
-  color: #1e4d96;
-  text-decoration: underline;
-}
-
-.prompt-full-text {
-  background-color: #f5f5f5;
-  padding: 15px;
-  border-radius: 6px;
-  border: 1px solid #dbdbdb;
-  text-align: left;
-  font-family: monospace;
-  font-size: 0.95rem;
-  color: #4a4a4a;
-  margin: 5px auto 0 auto;
-  max-width: 90%; /* 限制文字宽度，便于阅读 */
-  white-space: pre-wrap; /* 保留换行 */
-}
-
-/* --- 移动端适配 --- */
-@media screen and (max-width: 1024px) {
+/* --- 移动端适配 (保持不变，手机上依然需要横向滚动) --- */
+@media screen and (max-width: 768px) {
   .comparison-grid {
     display: flex;
     overflow-x: auto;
-    gap: 8px;
+    gap: 10px;
     padding-bottom: 10px;
     scroll-snap-type: x mandatory;
   }
   
   .comparison-column {
-    flex: 0 0 60vw; /* 移动端每个视频宽度 */
+    /* 手机上每个视频的最小宽度 */
+    flex: 0 0 80vw; /* 占屏幕宽度的80% */
     scroll-snap-align: center;
   }
   
