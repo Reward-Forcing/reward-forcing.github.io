@@ -749,5 +749,90 @@ a:focus {
   }
 }
 
+.comparison-section {
+  padding: 3rem 1.5rem;
+}
 
+/* 提示词样式 */
+.prompt-label {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #4a4a4a;
+  background-color: #f5f5f5;
+  padding: 8px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+/* 网格布局核心 */
+.comparison-grid {
+  display: grid;
+  /* 创建5个等宽的列 */
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 10px; /* 视频之间的间距 */
+  margin-bottom: 30px;
+}
+
+/* 方法标题行 */
+.header-row {
+  margin-bottom: 5px;
+}
+
+.method-name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #363636;
+}
+
+/* 突出显示你的方法 (例如第5列) */
+.method-name.is-ours {
+  color: #d93025; /* 红色或其他醒目颜色 */
+  font-weight: 800;
+}
+
+/* 视频容器 */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9; /* 根据你的视频比例调整，例如 1/1 或 4/3 */
+  background: #000;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- 移动端响应式处理 --- */
+@media screen and (max-width: 1024px) {
+  .comparison-grid {
+    /* 在小屏幕上，不再挤压视频，而是允许水平滚动 */
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 10px; /* 留出滚动条空间 */
+    scroll-snap-type: x mandatory;
+  }
+
+  .comparison-column {
+    /* 设定移动端每个视频的最小宽度，保证清晰度 */
+    flex: 0 0 200px; 
+    scroll-snap-align: start;
+  }
+  
+  /* 隐藏滚动条但保留功能 (Chrome/Safari) */
+  .comparison-grid::-webkit-scrollbar {
+    height: 6px;
+  }
+  .comparison-grid::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+  }
+}
 

@@ -391,35 +391,35 @@
 
 
 <!-- Image carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
+       <div class="item"> -->
         <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
+        <!-- <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/> -->
         <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
+        <!-- <h2 class="subtitle has-text-centered">
           First image description.
         </h2>
       </div>
-      <div class="item">
+      <div class="item"> -->
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
+        <!-- <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
           Second image description.
         </h2>
       </div>
-      <div class="item">
+      <div class="item"> -->
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
+        <!-- <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
          Third image description.
        </h2>
      </div>
-     <div class="item">
+     <div class="item"> -->
       <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
+      <!-- <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
       <h2 class="subtitle has-text-centered">
         Fourth image description.
       </h2>
@@ -427,84 +427,229 @@
   </div>
 </div>
 </div>
-</section>
+</section> -->
 <!-- End image carousel -->
 
 
 
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
-    <div class="container">
+    <div class="container"> -->
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+      <!-- <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
-          <div class="publication-video">
+          <div class="publication-video"> -->
             <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End youtube video -->
 
 
 <!-- Video carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Another Carousel</h2>
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
+        <div class="item item-video1"> -->
           <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
+          <!-- <video poster="" id="video1" controls muted loop height="100%" preload="metadata"> -->
             <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
+            <!-- <source src="static/videos/carousel1.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-video2">
+        <div class="item item-video2"> -->
           <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
+          <!-- <video poster="" id="video2" controls muted loop height="100%" preload="metadata"> -->
             <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
+            <!-- <source src="static/videos/carousel2.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-video3">
+        <div class="item item-video3"> -->
           <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
+          <!-- <video poster="" id="video3" controls muted loop height="100%" preload="metadata"> -->
             <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
+            <!-- <source src="static/videos/carousel3.mp4" type="video/mp4">
           </video>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End video carousel -->
 
 
+<section class="hero is-light is-small comparison-section">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      
+      <h2 class="title is-3 has-text-centered">Method Comparison</h2>
+      <p class="subtitle is-5 has-text-centered">
+        Comparison with state-of-the-art methods on text-to-video generation.
+      </p>
+      <br>
 
+      <!-- ==================== 这一行是表头 (方法名) ==================== -->
+      <!-- 注意：如果你有多个 Prompt，表头只需要写一次，或者每个 Prompt 重复一次，看你喜好 -->
+      <div class="comparison-grid header-row">
+        <div class="comparison-column method-name">Method A</div>
+        <div class="comparison-column method-name">Method B</div>
+        <div class="comparison-column method-name">Method C</div>
+        <div class="comparison-column method-name">Method D</div>
+        <div class="comparison-column method-name is-ours">Ours</div>
+      </div>
+
+      <!-- ==================== Prompt Group 1 ==================== -->
+      <div>
+        <!-- Prompt 文本 -->
+        <div class="prompt-label">
+          "A cyberpunk cat walking through a rainy neon city"
+        </div>
+
+        <!-- 视频网格 -->
+        <div class="comparison-grid" id="row-1">
+          <!-- Method 1 -->
+          <div class="comparison-column video-wrapper">
+            <video poster="" autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/carousel1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!-- Method 2 -->
+          <div class="comparison-column video-wrapper">
+            <video poster="" autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/carousel2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!-- Method 3 -->
+          <div class="comparison-column video-wrapper">
+            <video poster="" autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/carousel3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!-- Method 4 -->
+          <div class="comparison-column video-wrapper">
+            <video poster="" autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/carousel1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!-- Method 5 (Ours) -->
+          <div class="comparison-column video-wrapper">
+            <video poster="" autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/carousel2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== Prompt Group 2 ==================== -->
+      <div style="margin-top: 40px;">
+        <div class="prompt-label">
+          "A teddy bear swimming in the ocean, 4k resolution"
+        </div>
+
+        <div class="comparison-grid" id="row-2">
+          <!-- Method 1 -->
+          <div class="comparison-column video-wrapper">
+            <video poster="" autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/carousel3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!-- Method 2 -->
+          <div class="comparison-column video-wrapper">
+            <video poster="" autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/carousel1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!-- Method 3 -->
+          <div class="comparison-column video-wrapper">
+            <video poster="" autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/carousel2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!-- Method 4 -->
+          <div class="comparison-column video-wrapper">
+            <video poster="" autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/carousel3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!-- Method 5 (Ours) -->
+          <div class="comparison-column video-wrapper">
+            <video poster="" autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/carousel1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 
+  JavaScript: 视频同步脚本
+  作用：当用户拖动其中一个视频的进度条，或者暂停/播放时，
+  同一行的其他视频会尽量保持同步。这对于对比非常重要。
+-->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 获取所有的对比行
+    const rows = document.querySelectorAll('.comparison-grid:not(.header-row)');
+
+    rows.forEach(row => {
+      const videos = row.querySelectorAll('video');
+      
+      videos.forEach(video => {
+        // 当一个视频播放，其他的也播放
+        video.addEventListener('play', () => {
+          videos.forEach(v => {
+            if (v !== video && v.paused) v.play();
+          });
+        });
+
+        // 当一个视频暂停，其他的也暂停
+        video.addEventListener('pause', () => {
+          videos.forEach(v => {
+            if (v !== video && !v.paused) v.pause();
+          });
+        });
+
+        // 当进度条拖动 (seek)，同步时间
+        video.addEventListener('seeking', () => {
+          videos.forEach(v => {
+            if (v !== video && Math.abs(v.currentTime - video.currentTime) > 0.1) {
+              v.currentTime = video.currentTime;
+            }
+          });
+        });
+      });
+    });
+  });
+</script>
 
 
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title">Poster</h2>
+      <h2 class="title">Poster</h2> -->
 
       <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+      <!-- <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
           </iframe>
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
 
 
