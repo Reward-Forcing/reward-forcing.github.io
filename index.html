@@ -487,19 +487,19 @@
 </section> -->
 <!-- End video carousel -->
 
-
 <section class="hero is-light is-small comparison-section">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
+  <div class="hero-body" style="padding: 0;"> <!-- 去掉 hero-body 默认的 padding -->
+    
+    <!-- 使用自定义的 full-width-container -->
+    <div class="container full-width-container">
       
-      <h2 class="title is-3 has-text-centered">Method Comparison</h2>
+      <h2 class="title is-3 has-text-centered" style="margin-top: 2rem;">Method Comparison</h2>
       <p class="subtitle is-5 has-text-centered">
-        Comparison with state-of-the-art methods on text-to-video generation.
+        Full-width comparison across 5 different methods.
       </p>
       <br>
 
-      <!-- ==================== 这一行是表头 (方法名) ==================== -->
-      <!-- 注意：如果你有多个 Prompt，表头只需要写一次，或者每个 Prompt 重复一次，看你喜好 -->
+      <!-- 表头 -->
       <div class="comparison-grid header-row">
         <div class="comparison-column method-name">Method A</div>
         <div class="comparison-column method-name">Method B</div>
@@ -508,82 +508,80 @@
         <div class="comparison-column method-name is-ours">Ours</div>
       </div>
 
-      <!-- ==================== Prompt Group 1 ==================== -->
+      <!-- ==================== Prompt 1 ==================== -->
       <div>
-        <!-- Prompt 文本 -->
         <div class="prompt-label">
-          "A cyberpunk cat walking through a rainy neon city"
+          "A cinematic drone shot of a futuristic city at sunset"
         </div>
 
-        <!-- 视频网格 -->
-        <div class="comparison-grid" id="row-1">
+        <div class="comparison-grid">
           <!-- Method 1 -->
           <div class="comparison-column video-wrapper">
-            <video poster="" autoplay controls muted loop playsinline preload="metadata">
+            <video autoplay controls muted loop playsinline preload="metadata">
               <source src="static/videos/carousel1.mp4" type="video/mp4">
             </video>
           </div>
           <!-- Method 2 -->
           <div class="comparison-column video-wrapper">
-            <video poster="" autoplay controls muted loop playsinline preload="metadata">
+            <video autoplay controls muted loop playsinline preload="metadata">
               <source src="static/videos/carousel2.mp4" type="video/mp4">
             </video>
           </div>
           <!-- Method 3 -->
           <div class="comparison-column video-wrapper">
-            <video poster="" autoplay controls muted loop playsinline preload="metadata">
+            <video autoplay controls muted loop playsinline preload="metadata">
               <source src="static/videos/carousel3.mp4" type="video/mp4">
             </video>
           </div>
           <!-- Method 4 -->
           <div class="comparison-column video-wrapper">
-            <video poster="" autoplay controls muted loop playsinline preload="metadata">
+            <video autoplay controls muted loop playsinline preload="metadata">
               <source src="static/videos/carousel1.mp4" type="video/mp4">
             </video>
           </div>
           <!-- Method 5 (Ours) -->
           <div class="comparison-column video-wrapper">
-            <video poster="" autoplay controls muted loop playsinline preload="metadata">
+            <video autoplay controls muted loop playsinline preload="metadata">
               <source src="static/videos/carousel2.mp4" type="video/mp4">
             </video>
           </div>
         </div>
       </div>
 
-      <!-- ==================== Prompt Group 2 ==================== -->
-      <div style="margin-top: 40px;">
+      <!-- ==================== Prompt 2 ==================== -->
+      <div style="margin-top: 3rem;">
         <div class="prompt-label">
-          "A teddy bear swimming in the ocean, 4k resolution"
+          "A corgi astronaut discovering a new planet"
         </div>
 
-        <div class="comparison-grid" id="row-2">
+        <div class="comparison-grid">
           <!-- Method 1 -->
           <div class="comparison-column video-wrapper">
-            <video poster="" autoplay controls muted loop playsinline preload="metadata">
+            <video autoplay controls muted loop playsinline preload="metadata">
               <source src="static/videos/carousel3.mp4" type="video/mp4">
             </video>
           </div>
           <!-- Method 2 -->
           <div class="comparison-column video-wrapper">
-            <video poster="" autoplay controls muted loop playsinline preload="metadata">
+            <video autoplay controls muted loop playsinline preload="metadata">
               <source src="static/videos/carousel1.mp4" type="video/mp4">
             </video>
           </div>
           <!-- Method 3 -->
           <div class="comparison-column video-wrapper">
-            <video poster="" autoplay controls muted loop playsinline preload="metadata">
+            <video autoplay controls muted loop playsinline preload="metadata">
               <source src="static/videos/carousel2.mp4" type="video/mp4">
             </video>
           </div>
           <!-- Method 4 -->
           <div class="comparison-column video-wrapper">
-            <video poster="" autoplay controls muted loop playsinline preload="metadata">
+            <video autoplay controls muted loop playsinline preload="metadata">
               <source src="static/videos/carousel3.mp4" type="video/mp4">
             </video>
           </div>
           <!-- Method 5 (Ours) -->
           <div class="comparison-column video-wrapper">
-            <video poster="" autoplay controls muted loop playsinline preload="metadata">
+            <video autoplay controls muted loop playsinline preload="metadata">
               <source src="static/videos/carousel1.mp4" type="video/mp4">
             </video>
           </div>
@@ -594,47 +592,23 @@
   </div>
 </section>
 
-<!-- 
-  JavaScript: 视频同步脚本
-  作用：当用户拖动其中一个视频的进度条，或者暂停/播放时，
-  同一行的其他视频会尽量保持同步。这对于对比非常重要。
--->
+<!-- 视频同步脚本 (保持不变，这对于对比很重要) -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    // 获取所有的对比行
     const rows = document.querySelectorAll('.comparison-grid:not(.header-row)');
-
     rows.forEach(row => {
       const videos = row.querySelectorAll('video');
-      
       videos.forEach(video => {
-        // 当一个视频播放，其他的也播放
-        video.addEventListener('play', () => {
-          videos.forEach(v => {
-            if (v !== video && v.paused) v.play();
-          });
-        });
-
-        // 当一个视频暂停，其他的也暂停
-        video.addEventListener('pause', () => {
-          videos.forEach(v => {
-            if (v !== video && !v.paused) v.pause();
-          });
-        });
-
-        // 当进度条拖动 (seek)，同步时间
-        video.addEventListener('seeking', () => {
-          videos.forEach(v => {
-            if (v !== video && Math.abs(v.currentTime - video.currentTime) > 0.1) {
-              v.currentTime = video.currentTime;
-            }
-          });
-        });
+        video.addEventListener('play', () => { videos.forEach(v => { if (v !== video && v.paused) v.play(); }); });
+        video.addEventListener('pause', () => { videos.forEach(v => { if (v !== video && !v.paused) v.pause(); }); });
+        video.addEventListener('seeking', () => { videos.forEach(v => { if (v !== video && Math.abs(v.currentTime - video.currentTime) > 0.1) { v.currentTime = video.currentTime; } }); });
       });
     });
   });
 </script>
 
+</body>
+</html>
 
 
 <!-- Paper poster -->
