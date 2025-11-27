@@ -348,24 +348,6 @@
 </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -396,121 +378,111 @@
     
     <div class="container full-width-container">
       
-      <h2 class="title is-3 has-text-centered" style="margin-top: 2rem;">Scene Navigation Comparison</h2>
+      <h2 class="title is-3 has-text-centered" style="margin-top: 2rem;">Method Comparison</h2>
       <p class="subtitle is-5 has-text-centered">
-        Comparison across 4 methods (Full Width)
+        Comparison across 5 methods (Full Width)
       </p>
       <br>
 
-      <!-- 表头：改为4个 -->
+      <!-- 表头：恢复为5个 -->
       <div class="comparison-grid header-row">
-        <div class="comparison-column method-name">CausVid</div>
-        <div class="comparison-column method-name">Self Forcing</div>
-        <div class="comparison-column method-name">LongLive</div>
-        <div class="comparison-column method-name is-ours">Reward Forcing</div>
+        <div class="comparison-column method-name">Method A</div>
+        <div class="comparison-column method-name">Method B</div>
+        <div class="comparison-column method-name">Method C</div>
+        <div class="comparison-column method-name">Method D</div>
+        <div class="comparison-column method-name is-ours">Ours</div>
       </div>
 
-      <!-- ==================== Prompt 1 ==================== -->
+      <!-- ==================== Group 1 ==================== -->
       <div>
-        <div class="prompt-label">
-          "A cinematic drone shot of a futuristic city at sunset"
-        </div>
-
+        <!-- 视频网格 -->
         <div class="comparison-grid">
-          <!-- Method 1 -->
-          <div class="comparison-column video-wrapper">
-            <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/reward_forcing/video1/causvid.mp4" type="video/mp4">
-            </video>
-          </div>
-          <!-- Method 2 -->
-          <div class="comparison-column video-wrapper">
-            <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/reward_forcing/video1/self_forcing.mp4" type="video/mp4">
-            </video>
-          </div>
-          <!-- Method 3 -->
-          <div class="comparison-column video-wrapper">
-            <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/reward_forcing/video1/longlive.mp4" type="video/mp4">
-            </video>
-          </div>
-          <!-- Method 4 (Ours) -->
-          <div class="comparison-column video-wrapper">
-            <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/reward_forcing/video1/reward_forcing.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-
-      <!-- ==================== Prompt 2 ==================== -->
-      <div style="margin-top: 3rem;">
-        <div class="prompt-label">
-          "A corgi astronaut discovering a new planet"
-        </div>
-
-        <div class="comparison-grid">
-          <!-- Method 1 -->
-          <div class="comparison-column video-wrapper">
-            <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/carousel3.mp4" type="video/mp4">
-            </video>
-          </div>
-          <!-- Method 2 -->
+          <!-- Method A -->
           <div class="comparison-column video-wrapper">
             <video autoplay controls muted loop playsinline preload="metadata">
               <source src="static/videos/carousel1.mp4" type="video/mp4">
             </video>
           </div>
-          <!-- Method 3 -->
+          <!-- Method B -->
           <div class="comparison-column video-wrapper">
             <video autoplay controls muted loop playsinline preload="metadata">
               <source src="static/videos/carousel2.mp4" type="video/mp4">
             </video>
           </div>
-          <!-- Method 4 (Ours) -->
+          <!-- Method C -->
           <div class="comparison-column video-wrapper">
             <video autoplay controls muted loop playsinline preload="metadata">
               <source src="static/videos/carousel3.mp4" type="video/mp4">
             </video>
           </div>
-        </div>
-      </div>
-
-            <div style="margin-top: 3rem;">
-        <div class="prompt-label">
-          "A corgi astronaut discovering a new planet"
-        </div>
-
-        <div class="comparison-grid">
-          <!-- Method 1 -->
+          <!-- Method D (恢复) -->
           <div class="comparison-column video-wrapper">
             <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/carousel3.mp4" type="video/mp4">
+              <source src="static/videos/carousel2.mp4" type="video/mp4">
             </video>
           </div>
-          <!-- Method 2 -->
+          <!-- Ours -->
           <div class="comparison-column video-wrapper">
             <video autoplay controls muted loop playsinline preload="metadata">
               <source src="static/videos/carousel1.mp4" type="video/mp4">
             </video>
           </div>
-          <!-- Method 3 -->
-          <div class="comparison-column video-wrapper">
-            <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/carousel2.mp4" type="video/mp4">
-            </video>
+        </div>
+
+        <!-- Prompt (放在下方，点击展开) -->
+        <details class="prompt-toggle">
+          <summary class="prompt-summary">Click to view Prompt 1</summary>
+          <div class="prompt-full-text">
+A highly detailed, cinematic drone shot of a futuristic city at sunset, featuring flying cars, neon lights reflecting off glass skyscrapers, and a dense atmosphere. The lighting is dramatic with orange and teal contrast. 8k resolution, unreal engine 5 render style.
           </div>
-          <!-- Method 4 (Ours) -->
+        </details>
+      </div>
+
+      <!-- ==================== Group 2 ==================== -->
+      <div>
+        <!-- 视频网格 -->
+        <div class="comparison-grid">
+          <!-- Method A -->
           <div class="comparison-column video-wrapper">
             <video autoplay controls muted loop playsinline preload="metadata">
               <source src="static/videos/carousel3.mp4" type="video/mp4">
             </video>
           </div>
+          <!-- Method B -->
+          <div class="comparison-column video-wrapper">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/carousel1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!-- Method C -->
+          <div class="comparison-column video-wrapper">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/carousel2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!-- Method D (恢复) -->
+          <div class="comparison-column video-wrapper">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/carousel3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!-- Ours -->
+          <div class="comparison-column video-wrapper">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/carousel1.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
+
+        <!-- Prompt (放在下方，点击展开) -->
+        <details class="prompt-toggle">
+          <summary class="prompt-summary">Click to view Prompt 2</summary>
+          <div class="prompt-full-text">
+A cute corgi astronaut floating in zero gravity inside a spaceship, looking out the window at a swirling purple nebula. The corgi is wearing a detailed white space suit with a small flag patch. Soft interior lighting, high detail fur texture.
+          </div>
+        </details>
       </div>
-      
+
     </div>
   </div>
 </section>
@@ -522,13 +494,27 @@
     rows.forEach(row => {
       const videos = row.querySelectorAll('video');
       videos.forEach(video => {
-        video.addEventListener('play', () => { videos.forEach(v => { if (v !== video && v.paused) v.play(); }); });
-        video.addEventListener('pause', () => { videos.forEach(v => { if (v !== video && !v.paused) v.pause(); }); });
-        video.addEventListener('seeking', () => { videos.forEach(v => { if (v !== video && Math.abs(v.currentTime - video.currentTime) > 0.1) { v.currentTime = video.currentTime; } }); });
+        // 播放同步
+        video.addEventListener('play', () => { 
+            videos.forEach(v => { if (v !== video && v.paused) v.play(); }); 
+        });
+        // 暂停同步
+        video.addEventListener('pause', () => { 
+            videos.forEach(v => { if (v !== video && !v.paused) v.pause(); }); 
+        });
+        // 进度条拖拽同步
+        video.addEventListener('seeking', () => { 
+            videos.forEach(v => { 
+                if (v !== video && Math.abs(v.currentTime - video.currentTime) > 0.1) { 
+                    v.currentTime = video.currentTime; 
+                } 
+            }); 
+        });
       });
     });
   });
 </script>
+
 
 </body>
 </html>

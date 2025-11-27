@@ -754,9 +754,8 @@ a:focus {
   padding: 2rem 0;
 }
 
-/* 强制容器占满宽度 */
 .full-width-container {
-  width: 98%; /* 占据页面98%的宽度 */
+  width: 98%; /* 占据页面绝大部分宽度 */
   max-width: none !important;
   margin: 0 auto;
 }
@@ -764,24 +763,13 @@ a:focus {
 /* --- 网格系统 --- */
 .comparison-grid {
   display: grid;
-  /* 修改：改为4列等分 */
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 0.6%; /* 稍微增加一点间隙 */
-  margin-bottom: 2rem;
+  /* 修改：恢复为5列 */
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 0.5%; /* 5列比较挤，间隙设小一点 */
+  margin-bottom: 10px; /* 视频和下方Prompt之间的距离 */
 }
 
 /* --- 样式美化 --- */
-.prompt-label {
-  text-align: center;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #4a4a4a;
-  background-color: #f5f5f5;
-  padding: 10px;
-  border-radius: 4px;
-  font-size: 1.2rem;
-}
-
 .header-row {
   margin-bottom: 10px;
 }
@@ -789,8 +777,9 @@ a:focus {
 .method-name {
   text-align: center;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.1rem; /* 字体稍微调小以适应5列 */
   color: #363636;
+  white-space: nowrap; /* 防止标题换行 */
 }
 
 .method-name.is-ours {
@@ -803,12 +792,11 @@ a:focus {
 .video-wrapper {
   position: relative;
   width: 100%;
-  /* 保持16:9比例，如果视频是正方形请改为 1/1 */
   aspect-ratio: 16/9; 
   background: #000;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .video-wrapper video {
@@ -818,18 +806,64 @@ a:focus {
   display: block;
 }
 
+/* --- Prompt 折叠样式 (关键修改) --- */
+details.prompt-toggle {
+  margin-bottom: 3rem; /* 每个大组之间的间距 */
+  background-color: #fff;
+  border-radius: 6px;
+  text-align: center;
+}
+
+summary.prompt-summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #3273dc;
+  padding: 8px;
+  user-select: none;
+  list-style: none; /* 隐藏默认的小三角 */
+  transition: color 0.2s;
+}
+
+/* 自定义展开图标（可选） */
+summary.prompt-summary::after {
+  content: " ▼";
+  font-size: 0.8em;
+}
+details[open] summary.prompt-summary::after {
+  content: " ▲";
+}
+
+summary.prompt-summary:hover {
+  color: #1e4d96;
+  text-decoration: underline;
+}
+
+.prompt-full-text {
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #dbdbdb;
+  text-align: left;
+  font-family: monospace;
+  font-size: 0.95rem;
+  color: #4a4a4a;
+  margin: 5px auto 0 auto;
+  max-width: 90%; /* 限制文字宽度，便于阅读 */
+  white-space: pre-wrap; /* 保留换行 */
+}
+
 /* --- 移动端适配 --- */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .comparison-grid {
     display: flex;
     overflow-x: auto;
-    gap: 10px;
+    gap: 8px;
     padding-bottom: 10px;
     scroll-snap-type: x mandatory;
   }
   
   .comparison-column {
-    flex: 0 0 85vw; /* 手机上单个视频稍微再宽一点 */
+    flex: 0 0 60vw; /* 移动端每个视频宽度 */
     scroll-snap-align: center;
   }
   
