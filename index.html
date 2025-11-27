@@ -1046,114 +1046,90 @@ A highly detailed, cinematic drone shot of a futuristic city at sunset, featurin
 <!--End paper poster -->
 
 <!-- ==================== Interactive Videos Section ==================== -->
-<section class="section" style="background-color: #fcfcfc;">
-  <div class="container full-width-container">
+<section class="section">
+  <div class="container is-max-desktop">
     
     <h2 class="title is-3 has-text-centered">Interactive Videos</h2>
     <p class="subtitle is-5 has-text-centered">
-      Generated using our method with multi-turn prompts
+      Generated using our method (4 videos in a single row)
     </p>
     <br>
 
-    <!-- 4列布局容器 -->
-    <div class="interactive-grid">
+    <!-- 核心容器：Grid 布局，强制4列 -->
+    <div class="four-item-grid">
       
-      <!-- Video Item 1 -->
-      <div class="interactive-item">
-        <div class="video-wrapper">
-          <video autoplay controls muted loop playsinline preload="metadata">
+      <!-- Video 1 -->
+      <div class="grid-item">
+        <div class="video-container">
+          <video poster="" id="video1" autoplay controls muted loop playsinline height="100%">
             <source src="static/videos/carousel1.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="prompt-box">
-          <!-- Prompt A -->
-          <details class="fancy-details">
-            <summary class="fancy-summary btn-a">Prompt A: Initial State</summary>
-            <div class="fancy-content">
-              A cyberpunk street detective standing in the rain, neon lights reflecting on the wet pavement, holding a glowing umbrella.
-            </div>
+        <div class="prompt-stack">
+          <details class="custom-details prompt-a">
+            <summary>Prompt A: Initial</summary>
+            <p class="prompt-text">A cyberpunk street detective standing in the rain, neon lights reflecting on the wet pavement.</p>
           </details>
-          <!-- Prompt B -->
-          <details class="fancy-details">
-            <summary class="fancy-summary btn-b">Prompt B: Interaction</summary>
-            <div class="fancy-content">
-              The detective suddenly turns around and draws a futuristic laser pistol, aiming at a shadow in the alleyway.
-            </div>
+          <details class="custom-details prompt-b">
+            <summary>Prompt B: Interact</summary>
+            <p class="prompt-text">The detective draws a glowing laser pistol and aims at the alleyway shadow.</p>
           </details>
         </div>
       </div>
 
-      <!-- Video Item 2 -->
-      <div class="interactive-item">
-        <div class="video-wrapper">
-          <video autoplay controls muted loop playsinline preload="metadata">
+      <!-- Video 2 -->
+      <div class="grid-item">
+        <div class="video-container">
+          <video poster="" id="video2" autoplay controls muted loop playsinline height="100%">
             <source src="static/videos/carousel2.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="prompt-box">
-          <!-- Prompt A -->
-          <details class="fancy-details">
-            <summary class="fancy-summary btn-a">Prompt A: Initial State</summary>
-            <div class="fancy-content">
-              A fluffy white cat sleeping on a comfortable velvet sofa in a sunlit living room.
-            </div>
+        <div class="prompt-stack">
+          <details class="custom-details prompt-a">
+            <summary>Prompt A: Initial</summary>
+            <p class="prompt-text">A fluffy white cat sleeping on a velvet sofa in a sunlit living room.</p>
           </details>
-          <!-- Prompt B -->
-          <details class="fancy-details">
-            <summary class="fancy-summary btn-b">Prompt B: Interaction</summary>
-            <div class="fancy-content">
-              The cat wakes up, stretches its paws, and jumps off the sofa to chase a rolling red ball.
-            </div>
+          <details class="custom-details prompt-b">
+            <summary>Prompt B: Interact</summary>
+            <p class="prompt-text">The cat wakes up, stretches, and jumps off to chase a red ball.</p>
           </details>
         </div>
       </div>
 
-      <!-- Video Item 3 -->
-      <div class="interactive-item">
-        <div class="video-wrapper">
-          <video autoplay controls muted loop playsinline preload="metadata">
+      <!-- Video 3 -->
+      <div class="grid-item">
+        <div class="video-container">
+          <video poster="" id="video3" autoplay controls muted loop playsinline height="100%">
             <source src="static/videos/carousel3.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="prompt-box">
-          <!-- Prompt A -->
-          <details class="fancy-details">
-            <summary class="fancy-summary btn-a">Prompt A: Initial State</summary>
-            <div class="fancy-content">
-              A medieval knight in shining armor riding a horse through a dense, foggy forest.
-            </div>
+        <div class="prompt-stack">
+          <details class="custom-details prompt-a">
+            <summary>Prompt A: Initial</summary>
+            <p class="prompt-text">A medieval knight riding a horse through a dense, foggy forest.</p>
           </details>
-          <!-- Prompt B -->
-          <details class="fancy-details">
-            <summary class="fancy-summary btn-b">Prompt B: Interaction</summary>
-            <div class="fancy-content">
-              The horse rears up in fear as a dragon breathes fire from the sky above the trees.
-            </div>
+          <details class="custom-details prompt-b">
+            <summary>Prompt B: Interact</summary>
+            <p class="prompt-text">The horse rears up as a dragon breathes fire from the sky.</p>
           </details>
         </div>
       </div>
 
-      <!-- Video Item 4 -->
-      <div class="interactive-item">
-        <div class="video-wrapper">
-          <video autoplay controls muted loop playsinline preload="metadata">
+      <!-- Video 4 -->
+      <div class="grid-item">
+        <div class="video-container">
+          <video poster="" id="video4" autoplay controls muted loop playsinline height="100%">
             <source src="static/videos/carousel1.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="prompt-box">
-          <!-- Prompt A -->
-          <details class="fancy-details">
-            <summary class="fancy-summary btn-a">Prompt A: Initial State</summary>
-            <div class="fancy-content">
-              A chef chopping vegetables in a busy professional kitchen with steam rising from pots.
-            </div>
+        <div class="prompt-stack">
+          <details class="custom-details prompt-a">
+            <summary>Prompt A: Initial</summary>
+            <p class="prompt-text">A chef chopping vegetables in a busy professional kitchen.</p>
           </details>
-          <!-- Prompt B -->
-          <details class="fancy-details">
-            <summary class="fancy-summary btn-b">Prompt B: Interaction</summary>
-            <div class="fancy-content">
-              The chef throws the vegetables into a wok, creating a massive burst of flames (flambé).
-            </div>
+          <details class="custom-details prompt-b">
+            <summary>Prompt B: Interact</summary>
+            <p class="prompt-text">The chef throws vegetables into a wok, creating a massive flame.</p>
           </details>
         </div>
       </div>
