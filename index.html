@@ -396,7 +396,7 @@
     
     <div class="container full-width-container">
       
-      <h2 class="title is-3 has-text-centered" style="margin-top: 2rem;">Method Comparison</h2>
+      <h2 class="title is-3 has-text-centered" style="margin-top: 2rem;">Scene Navigation Comparison</h2>
       <p class="subtitle is-5 has-text-centered">
         Comparison across 4 methods (Full Width)
       </p>
@@ -404,11 +404,10 @@
 
       <!-- 表头：改为4个 -->
       <div class="comparison-grid header-row">
-        <div class="comparison-column method-name">Method A</div>
-        <div class="comparison-column method-name">Method B</div>
-        <div class="comparison-column method-name">Method C</div>
-        <!-- 删除了 Method D -->
-        <div class="comparison-column method-name is-ours">Ours</div>
+        <div class="comparison-column method-name">CausVid</div>
+        <div class="comparison-column method-name">Self Forcing</div>
+        <div class="comparison-column method-name">LongLive</div>
+        <div class="comparison-column method-name is-ours">Reward Forcing</div>
       </div>
 
       <!-- ==================== Prompt 1 ==================== -->
@@ -421,25 +420,25 @@
           <!-- Method 1 -->
           <div class="comparison-column video-wrapper">
             <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/carousel1.mp4" type="video/mp4">
+              <source src="static/videos/reward_forcing/video1/causvid.mp4" type="video/mp4">
             </video>
           </div>
           <!-- Method 2 -->
           <div class="comparison-column video-wrapper">
             <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/carousel2.mp4" type="video/mp4">
+              <source src="static/videos/reward_forcing/video1/self_forcing.mp4" type="video/mp4">
             </video>
           </div>
           <!-- Method 3 -->
           <div class="comparison-column video-wrapper">
             <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/carousel3.mp4" type="video/mp4">
+              <source src="static/videos/reward_forcing/video1/longlive.mp4" type="video/mp4">
             </video>
           </div>
           <!-- Method 4 (Ours) -->
           <div class="comparison-column video-wrapper">
             <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/carousel1.mp4" type="video/mp4">
+              <source src="static/videos/reward_forcing/video1/reward_forcing.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -479,6 +478,39 @@
         </div>
       </div>
 
+            <div style="margin-top: 3rem;">
+        <div class="prompt-label">
+          "A corgi astronaut discovering a new planet"
+        </div>
+
+        <div class="comparison-grid">
+          <!-- Method 1 -->
+          <div class="comparison-column video-wrapper">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/carousel3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!-- Method 2 -->
+          <div class="comparison-column video-wrapper">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/carousel1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!-- Method 3 -->
+          <div class="comparison-column video-wrapper">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/carousel2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <!-- Method 4 (Ours) -->
+          <div class="comparison-column video-wrapper">
+            <video autoplay controls muted loop playsinline preload="metadata">
+              <source src="static/videos/carousel3.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </div>
 </section>
