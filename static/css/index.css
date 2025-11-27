@@ -751,22 +751,22 @@ a:focus {
 
 /* --- 核心布局调整 --- */
 .comparison-section {
-  padding: 2rem 0; /* 上下留白，左右不留白(由内部容器控制) */
+  padding: 2rem 0;
 }
 
 /* 强制容器占满宽度 */
 .full-width-container {
   width: 98%; /* 占据页面98%的宽度 */
-  max-width: none !important; /* 覆盖 Bulma 的最大宽度限制 */
-  margin: 0 auto; /* 居中 */
+  max-width: none !important;
+  margin: 0 auto;
 }
 
 /* --- 网格系统 --- */
 .comparison-grid {
   display: grid;
-  /* 5列等分 */
-  grid-template-columns: repeat(5, 1fr); 
-  gap: 0.5%; /* 视频之间的间隙，使用百分比适应屏幕 */
+  /* 修改：改为4列等分 */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 0.6%; /* 稍微增加一点间隙 */
   margin-bottom: 2rem;
 }
 
@@ -779,7 +779,7 @@ a:focus {
   background-color: #f5f5f5;
   padding: 10px;
   border-radius: 4px;
-  font-size: 1.1rem; /* 字体稍微调大一点 */
+  font-size: 1.2rem;
 }
 
 .header-row {
@@ -789,37 +789,36 @@ a:focus {
 .method-name {
   text-align: center;
   font-weight: bold;
-  font-size: 1.2rem; /* 标题字体调大 */
+  font-size: 1.3rem;
   color: #363636;
 }
 
 .method-name.is-ours {
   color: #d93025;
   font-weight: 800;
-  text-decoration: underline; /* 加下划线强调 */
+  text-decoration: underline;
 }
 
 /* --- 视频容器 --- */
 .video-wrapper {
   position: relative;
   width: 100%;
-  /* 关键：设置纵横比，确保视频放大后高度自动跟随 */
-  /* 如果你的视频是正方形，改成 1/1。如果是 4:3，改成 4/3 */
+  /* 保持16:9比例，如果视频是正方形请改为 1/1 */
   aspect-ratio: 16/9; 
   background: #000;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 加一点阴影增加立体感 */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .video-wrapper video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 确保填满容器 */
+  object-fit: cover;
   display: block;
 }
 
-/* --- 移动端适配 (保持不变，手机上依然需要横向滚动) --- */
+/* --- 移动端适配 --- */
 @media screen and (max-width: 768px) {
   .comparison-grid {
     display: flex;
@@ -830,8 +829,7 @@ a:focus {
   }
   
   .comparison-column {
-    /* 手机上每个视频的最小宽度 */
-    flex: 0 0 80vw; /* 占屏幕宽度的80% */
+    flex: 0 0 85vw; /* 手机上单个视频稍微再宽一点 */
     scroll-snap-align: center;
   }
   
@@ -840,4 +838,3 @@ a:focus {
     padding: 0 10px;
   }
 }
-

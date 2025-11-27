@@ -390,121 +390,24 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item"> -->
-        <!-- TODO: Replace with your research result images -->
-        <!-- <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/> -->
-        <!-- TODO: Replace with description of this result -->
-        <!-- <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item"> -->
-        <!-- Your image here -->
-        <!-- <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item"> -->
-        <!-- Your image here -->
-        <!-- <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item"> -->
-      <!-- Your image here -->
-      <!-- <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section> -->
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container"> -->
-      <!-- Paper video. -->
-      <!-- <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video"> -->
-            <!-- TODO: Replace with your YouTube video ID -->
-            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1"> -->
-          <!-- TODO: Add poster image for better preview -->
-          <!-- <video poster="" id="video1" controls muted loop height="100%" preload="metadata"> -->
-            <!-- Your video file here -->
-            <!-- <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2"> -->
-          <!-- TODO: Add poster image for better preview -->
-          <!-- <video poster="" id="video2" controls muted loop height="100%" preload="metadata"> -->
-            <!-- Your video file here -->
-            <!-- <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3"> -->
-          <!-- TODO: Add poster image for better preview -->
-          <!-- <video poster="" id="video3" controls muted loop height="100%" preload="metadata"> -->
-            <!-- Your video file here -->
-            <!-- <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-<!-- End video carousel -->
 
 <section class="hero is-light is-small comparison-section">
-  <div class="hero-body" style="padding: 0;"> <!-- 去掉 hero-body 默认的 padding -->
+  <div class="hero-body" style="padding: 0;">
     
-    <!-- 使用自定义的 full-width-container -->
     <div class="container full-width-container">
       
       <h2 class="title is-3 has-text-centered" style="margin-top: 2rem;">Method Comparison</h2>
       <p class="subtitle is-5 has-text-centered">
-        Full-width comparison across 5 different methods.
+        Comparison across 4 methods (Full Width)
       </p>
       <br>
 
-      <!-- 表头 -->
+      <!-- 表头：改为4个 -->
       <div class="comparison-grid header-row">
         <div class="comparison-column method-name">Method A</div>
         <div class="comparison-column method-name">Method B</div>
         <div class="comparison-column method-name">Method C</div>
-        <div class="comparison-column method-name">Method D</div>
+        <!-- 删除了 Method D -->
         <div class="comparison-column method-name is-ours">Ours</div>
       </div>
 
@@ -533,16 +436,10 @@
               <source src="static/videos/carousel3.mp4" type="video/mp4">
             </video>
           </div>
-          <!-- Method 4 -->
+          <!-- Method 4 (Ours) -->
           <div class="comparison-column video-wrapper">
             <video autoplay controls muted loop playsinline preload="metadata">
               <source src="static/videos/carousel1.mp4" type="video/mp4">
-            </video>
-          </div>
-          <!-- Method 5 (Ours) -->
-          <div class="comparison-column video-wrapper">
-            <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/carousel2.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -573,16 +470,10 @@
               <source src="static/videos/carousel2.mp4" type="video/mp4">
             </video>
           </div>
-          <!-- Method 4 -->
+          <!-- Method 4 (Ours) -->
           <div class="comparison-column video-wrapper">
             <video autoplay controls muted loop playsinline preload="metadata">
               <source src="static/videos/carousel3.mp4" type="video/mp4">
-            </video>
-          </div>
-          <!-- Method 5 (Ours) -->
-          <div class="comparison-column video-wrapper">
-            <video autoplay controls muted loop playsinline preload="metadata">
-              <source src="static/videos/carousel1.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -592,7 +483,7 @@
   </div>
 </section>
 
-<!-- 视频同步脚本 (保持不变，这对于对比很重要) -->
+<!-- 视频同步脚本 -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const rows = document.querySelectorAll('.comparison-grid:not(.header-row)');
